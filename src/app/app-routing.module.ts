@@ -8,9 +8,9 @@ import { BasquetComponent } from './basquet/basquet.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path:'home', component:HomeComponent},
-  {path:'voley', component:VoleyComponent},
-  {path:'futbol', component: FutbolComponent},
-  {path:'basquet', component: BasquetComponent},
+  {path:'Voley', component:VoleyComponent},
+  {path:'Futbol', component: FutbolComponent},
+  {path:'Basquet', component: BasquetComponent},
   {path: '**', component:HomeComponent }
 ];
 
