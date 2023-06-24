@@ -1,52 +1,34 @@
-.header {
-    width: 100%;
-}
-
-.navegacion {
-    background-color: rgba(245, 60, 60, 0.982);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.navegacion ul {
-    list-style: none;
-    
-}
-.menu{
-    padding-left: 30px;
-}
-.menu>li{ /*hay que darle position relative a los elementes del menu(.menu>li) para que despues el .submenu, mediante position: absolute; herede el ancho del padre(.menu)*/
-    display: inline-block;
+.image-container {
+    display: flex;
+    /*justify-content: flex-start;*/
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+ 
+  .image-wrapper {
     position: relative;
-}
-.menu>li>a {
-    display: block;
-    text-decoration: none;
-    padding: 15px 20px;
-    color: aliceblue;
-}
-
-.menu li a:hover{
+    margin-right: 10px;
+    margin-bottom: 10px;
     
-    color: rgb(248, 213, 57);
-    transition: all .3s;
-}
-.submenu{
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .btn {
     position: absolute;
-    background-color: rgb(0, 0, 0);
-    visibility: hidden;/*es para que se esconda*/
-    opacity: 0;
-    transition: opacity 1s;
-    width: 110%;/*para que tenga el 120% del tamaño del padre (.menu>li)*/
-}
-.submenu li a {
-    text-decoration: none;
-    color: aliceblue;
-    
-}
-.submenu li{
-     padding: 15px;
-}
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
-}
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    color: white;
+  }
