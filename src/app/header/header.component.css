@@ -4,10 +4,21 @@
     font-family: Arial, Helvetica, sans-serif;
     
 }
-
-.logotipo img{
-    height: 100px;
+.logotipo{
+    display: flex;
+    box-shadow:black 10px 10px 20px 1px inset;
 }
+.logo{
+    padding-right: 30px;
+    background-color: black;
+}
+.logotipo img{
+    height: 130px;
+}
+.deporte{
+    z-index: -1;
+}
+
 .navegacion ul{
     display: flex;
     justify-content: space-around;
@@ -16,7 +27,7 @@
 .navegacion ul li a{
     text-decoration: none;
     color: black;
-   padding: 20px;
+    padding: 20px;
    
 }
 .navegacion ul li{
@@ -43,7 +54,4 @@ input{
     top: 15px;
     right: 15px;
     max-height: 25px;
-}
-.navegacio ul li a:hover{
-   
 }
