@@ -1,9 +1,3 @@
-interface Videos{
-  titulo: string,
-  subtitulo: string,
-  image: string,
-  url: string,
-}
 import { Component, OnInit, Output} from '@angular/core';
 
 @Component({

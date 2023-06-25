@@ -1,1 +1,10 @@
-<p>basquet works!</p>
+<div class="basquet">
+    <ul>
+        <li class="grid" *ngFor="let datos of arregloTarjetaBasquet">
+            <br>
+            <div class="title">{{datos.titulo}}</div>
+            <div class="sub-title">{{datos.subtitulo}}</div>
+            <a [href]="datos.url" target="_blank"> <img class="image" [src]="datos.image" ></a>
+        </li>
+    </ul>
+</div>

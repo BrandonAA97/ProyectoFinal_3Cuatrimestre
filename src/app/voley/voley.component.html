@@ -1,10 +1,10 @@
 <div class="voley">
     <ul>
-        <li *ngFor="let datos of arregloTarjetaVoley">
-            <img [src]="datos.image" alt="">
-            <button><a class="url">{{datos.url}}</a></button>
-            <p> <span></span>{{datos.subtitulo}}</p>
-            <p></p>
+        <li class="grid" *ngFor="let datos of arregloTarjetaVoley">
+            <br>
+            <div class="title">{{datos.titulo}}</div>
+            <div class="sub-title">{{datos.subtitulo}}</div>
+            <a [href]="datos.url" target="_blank"> <img class="image" [src]="datos.image"> </a>
         </li>
     </ul>
 </div>
