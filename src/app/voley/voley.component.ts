@@ -10,7 +10,7 @@ import { Videos } from '../models/models';
 export class VoleyComponent implements OnInit {
 
 public arregloTarjetaVoley: Videos[]=[];
-dataInputSearch=""
+
 
 constructor() {}
 ngOnInit(): void {
@@ -33,21 +33,28 @@ ngOnInit(): void {
   
   ]
 
-   }
-   public buscarZapa() {
-    // Creamos un arreglo vacio para almacenar las zapatillas filtradas
-    const VideoFiltrado: Videos[] = [];
-    // Iteramos el array usando el metodo forEach
-    this.arregloTarjetaVoley.forEach(el => {
-      //para cada elemento "el" en el arreglo zapatillas se realiza una verificacion de la marca (La condición)
-      //Se verifica si el nombre de la marca de la zapatilla actual (el.marca) contiene el 
-      //valor de this.dataInputSearch, que representa el término de búsqueda ingresado por el usuario.
-      if (el.titulo.toLocaleLowerCase().includes(this.dataInputSearch.toLocaleLowerCase())) {
-        //Si la condicion es verdadera la zapatilla actual se agrega al arreglo "VideoFiltrado", utilizando el metodo "push()"
-        VideoFiltrado.push(el);
-      } else { } // Si no coincide no sucede nada
+   } 
+  datoBuscado=""
+  public videoEncontrado: any;
+  public VideoFiltrado: Array<any>=[];
+  
+   public buscarvideo() {
+
+    
+
+
+    const x = this.arregloTarjetaVoley.filter((elemento)=>{
+      if (elemento.titulo === this.datoBuscado){
+        this.videoEncontrado=this.arregloTarjetaVoley.indexOf(elemento);
+        this.VideoFiltrado.push(this.arregloTarjetaVoley[this.videoEncontrado]);
+      }
+      if (elemento == undefined){
+        console.log("No existe")
+      }else{
+        console.log("Existe")
+      }
     })
    
   }
-}
 
+}

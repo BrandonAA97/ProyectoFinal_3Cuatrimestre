@@ -9,5 +9,15 @@
     </ul>
 </div>
 <div>
-    <input class="bus-input" type="text" placeholder="Escribir algo aquí" [(ngModel)]="dataInputSearch" (keyup.enter)="buscarZapa()">
+    <input class="bus-input" type="text" placeholder="Escribir algo aquí" [(ngModel)]="datoBuscado">
+    <button (click)="buscarvideo()">Buscar</button>
+    
+    <div class="Retorno">
+        <li class="grid" *ngFor="let video of videoEncontrado">
+        <br>
+        <div class="title">{{video.titulo}}</div>
+        <!-- <div class="sub-title">{{video.subtitulo}}</div><br>
+        <a [href]="video.url" target="_blank"> <img class="image" [src]="video.image"> </a> -->
+        </li>
+    </div>
 </div>
