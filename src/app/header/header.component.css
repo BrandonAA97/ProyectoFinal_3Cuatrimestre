@@ -2,21 +2,25 @@
     margin: 0%;
     padding: 0%;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 .logotipo{
     display: flex;
-    box-shadow:black 10px 10px 20px 1px inset;
+    box-shadow:rgb(0, 0, 0) 10px 10px 20px 1px inset;
+    justify-content: space-around;
+
 }
 .logo{
     padding-right: 30px;
-    background-color: black;
+    background-color: #fd6e21d5;
+    /* background-color: #bc6f0ada; */
 }
 .logotipo img{
     height: 130px;
 }
 .deporte{
-    z-index: -1;
+    width: 250px;
+    
+
 }
 
 .navegacion ul{
@@ -35,13 +39,13 @@
      display: inline-flex;
     line-height: 20px;
     float: left;
-    
     transition: all 500ms;
     
 }
 .header {
     align-items: center;
-    background-color: #fd6e21;
+    /* background-color: #fd6e21; */
+    background-color: #bc6f0ada;
     padding: 0px 0px;
 }
 
