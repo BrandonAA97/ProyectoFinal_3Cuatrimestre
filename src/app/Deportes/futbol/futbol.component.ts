@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { Videos } from '../models/models';
+import { Videos } from '../../models/models';
 
 @Component({
   selector: 'app-futbol',

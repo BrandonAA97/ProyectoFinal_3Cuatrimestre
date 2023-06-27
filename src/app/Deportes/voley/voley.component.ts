@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Videos } from '../models/models';
+import { Videos } from '../../models/models';
+
 
 @Component({
   selector: 'app-voley',
@@ -13,6 +14,8 @@ public arregloTarjetaVoley: Videos[]=[];
 
 
 constructor() {}
+public VideoFiltrado: Array<any>=[];
+
 ngOnInit(): void {
   this.arregloTarjetaVoley = [
       {titulo: "Argentina vs Cuba (Amistoso Internacional)",
@@ -32,29 +35,28 @@ ngOnInit(): void {
       }
   
   ]
-
-   } 
-  datoBuscado=""
-  public videoEncontrado: any;
-  public VideoFiltrado: Array<any>=[];
-  
-   public buscarvideo() {
-
-    
-
-
-    const x = this.arregloTarjetaVoley.filter((elemento)=>{
-      if (elemento.titulo === this.datoBuscado){
-        this.videoEncontrado=this.arregloTarjetaVoley.indexOf(elemento);
-        this.VideoFiltrado.push(this.arregloTarjetaVoley[this.videoEncontrado]);
-      }
-      if (elemento == undefined){
-        console.log("No existe")
-      }else{
-        console.log("Existe")
-      }
-    })
-   
-  }
+  this.VideoFiltrado = this.arregloTarjetaVoley
 
 }
+
+
+datoBuscado=""
+public videoEncontrado: any;
+
+  
+public buscarVideo() {
+
+  const x :  Videos[]=[];
+  
+  this.VideoFiltrado.forEach(el => {
+    if (el.titulo.toLocaleLowerCase().includes(this.datoBuscado.toLocaleLowerCase)){
+      this.videoEncontrado.push(el);
+    }else{}
+  })
+  this.videoEncontrado = x
+   
+ }
+
+}
+
+

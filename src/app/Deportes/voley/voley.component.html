@@ -1,0 +1,28 @@
+<div class="busq-contenido">
+    <input class="busq-input" type="text" placeholder="Escribir algo aquí" [(ngModel)]="datoBuscado" (keyup.enter)="buscarVideo()">
+    <button (click)="buscarVideo()">Buscar</button>
+    
+    <div> 
+        <ul class="busq">
+            <li class="grid" *ngFor="let video of videoEncontrado">
+                <br>
+            <h3 class="busq-title">{{video.titulo}}</h3>  
+            <div class="busq-sub-title">{{video.subtitulo}}</div><br>
+            <a [href]="video.url" target="_blank"> 
+                <img class="image" [src]="video.image"> 
+            </a>
+        </li>
+        </ul>
+    </div>
+</div>
+
+<div class="voley">
+    <ul>
+        <li class="grid" *ngFor="let datos of arregloTarjetaVoley">
+            <br>
+            <div class="title">{{datos.titulo}}</div>
+            <div class="sub-title">{{datos.subtitulo}}</div><br>
+            <a [href]="datos.url" target="_blank"> <img class="image" [src]="datos.image"> </a>
+        </li>
+    </ul>
+</div>

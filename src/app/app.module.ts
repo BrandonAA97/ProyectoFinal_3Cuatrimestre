@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 import { HomeComponent } from './home/home.component';
-import { VoleyComponent } from './voley/voley.component';
-import { BasquetComponent } from './basquet/basquet.component';
-import { FutbolComponent } from './futbol/futbol.component';
+import { VoleyComponent } from './Deportes/voley/voley.component';
+import { BasquetComponent } from './Deportes/basquet/basquet.component';
+import { FutbolComponent } from './Deportes/futbol/futbol.component';
+import { DeportesComponent } from './Deportes/deportes.component';
 
 import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     VoleyComponent,
     BasquetComponent,
     FutbolComponent,
-    
+    DeportesComponent
   ],
   imports: [
     BrowserModule,
