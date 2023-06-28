@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Videos } from '../models/models';
 
 
+
 @Component({
   selector: 'app-deportes',
   templateUrl: './deportes.component.html',
