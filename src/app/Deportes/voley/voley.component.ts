@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Inject, Injectable, OnInit } from '@angular/core';
 import { Videos } from '../../models/models';
 
 
@@ -12,12 +12,13 @@ export class VoleyComponent implements OnInit {
 
 public arregloTarjetaVoley: Videos[]=[];
 
-
 constructor() {}
-public VideoFiltrado: Array<any>=[];
+
+datoBuscado=""
+
 
 ngOnInit(): void {
-  this.arregloTarjetaVoley = [
+    this.arregloTarjetaVoley = [
       {titulo: "Argentina vs Cuba (Amistoso Internacional)",
        subtitulo: "3 - 0", 
        image: "https://media.tycsports.com/files/2023/06/02/576561/argentina-vs-cuba-voley-2023-foto-feva_1440x810_wmk.webp?v=2", 
@@ -33,30 +34,9 @@ ngOnInit(): void {
         image: "https://elobjetivo.com.ar/download/multimedia.normal.bc3a01d0ceea72a6.766f6c65795f6e6f726d616c2e77656270.webp", 
         url:"https://www.youtube.com/watch?v=aGuNrODMnCw&pp=ygUmYXJnZW50aW5hIHZzIGVzdGFkb3MgdW5pZG9zIHZvbGV5IGpqb28%3D"
       }
-  
   ]
-  this.VideoFiltrado = this.arregloTarjetaVoley
-
+}
 }
 
-
-datoBuscado=""
-public videoEncontrado: any;
-
-  
-public buscarVideo() {
-
-  const x :  Videos[]=[];
-  
-  this.VideoFiltrado.forEach(el => {
-    if (el.titulo.toLocaleLowerCase().includes(this.datoBuscado.toLocaleLowerCase)){
-      this.videoEncontrado.push(el);
-    }else{}
-  })
-  this.videoEncontrado = x
-   
- }
-
-}
 
 

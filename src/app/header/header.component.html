@@ -1,10 +1,10 @@
 
 <div class="logotipo">
-  <a class="logo" [routerLink]="['home']"><img src="../assets/Definitivo.png" alt="Logo de la pagina"></a>    
+  <a class="logo" [routerLink]="['home']"><img src="../assets/img/Definitivo.png" alt="Logo de la pagina"></a>    
   
-  <img class="deporte" src="../assets/futbol-header.jpeg" alt="Futbol"> 
-  <img class="deporte" src="../assets/voley-header.jpg" alt="Voley">
-  <img class="deporte" src="../assets/basquet-header.jpg" alt="Basquet"> 
+  <img class="deporte" src="../assets/img/futbol-header.jpeg" alt="Futbol"> 
+  <img class="deporte" src="../assets/img/voley-header.jpg" alt="Voley">
+  <img class="deporte" src="../assets/img/basquet-header.jpg" alt="Basquet"> 
    
 </div>
 
@@ -13,7 +13,7 @@
       <ul class="menu">
         <li><a [routerLink]="['/home']">Inicio</a></li>
         
-        <li><a href="">Deportes</a></li>
+        <li><a [routerLink]="['/Deportes']">Deportes</a></li>
     
         <li><a [routerLink]="['/Futbol']">Futbol</a></li>
         <li><a [routerLink]="['/Voley']">Voley</a></li>
@@ -21,8 +21,6 @@
           
         
         <li><a href="">Sobre nosotros</a></li>
-  
-        <input placeholder="Buscá aca flaco" type="text" />
       </ul>
     </nav>
 </div>

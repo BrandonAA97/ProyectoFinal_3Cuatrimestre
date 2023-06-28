@@ -10,6 +10,7 @@ export class BasquetComponent implements OnInit{
 
   public arregloTarjetaBasquet: Videos[]=[];
   constructor() {}
+  datoBuscado=''
  
   ngOnInit() {
     this.arregloTarjetaBasquet = [

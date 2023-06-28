@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   imagenes= [
     {
-      src: '../assets/remate.gif',
+      src: '../assets/img/remate.gif',
       alt:'remate'
     },
     {
-      src: '../assets/clavada.gif',
+      src: '../assets/img/clavada.gif',
       alt:''
     },
     {
-      src: '../assets/golArg.gif',
+      src: '../assets/img/golArg.gif',
       alt:''
     }
   ]

@@ -1,6 +1,9 @@
-<div class="basquet">
+<div class="busq-contenido">
+    <input class="busq-input" type="text" name="datoBuscado" placeholder="Escribir algo aquí" [(ngModel)]="datoBuscado">
+</div>
+<div class="futbol">
     <ul>
-        <li class="grid" *ngFor="let datos of arregloTarjetaBasquet">
+        <li class="grid" *ngFor="let datos of arregloTarjetaBasquet | filtro: datoBuscado">
             <br>
             <div class="title">{{datos.titulo}}</div>
             <div class="sub-title">{{datos.subtitulo}}</div>

@@ -12,6 +12,7 @@ import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { DeportesComponent } from './Deportes/deportes.component';
 
 import { FormsModule } from '@angular/forms';
+import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     VoleyComponent,
     BasquetComponent,
     FutbolComponent,
-    DeportesComponent
+    DeportesComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
