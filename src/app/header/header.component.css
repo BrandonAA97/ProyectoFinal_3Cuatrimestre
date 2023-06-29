@@ -2,60 +2,60 @@
     margin: 0%;
     padding: 0%;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
+
 .logotipo{
     display: flex;
-    box-shadow:rgb(0, 0, 0) 10px 10px 20px 1px inset;
-    justify-content: space-around;
-
+    background-color: black;
+   
 }
-.logo{
-    padding-right: 30px;
-    background-color: #fd6e21d5;
-    /* background-color: #bc6f0ada; */
+.logo img{
+    height: 120px;
+    padding: 10px 25px 0px 25px;
+   
 }
-.logotipo img{
-    height: 130px;
-}
-.deporte{
-    width: 250px;
+.logotipo>ul{
+    width: 100%;
+    padding-right: 10px;
     
-
+    display: flex;
+    justify-content: flex-end;
+}
+.deporte, .deporte2, .deporte3{
+height: 140px;
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.navegacion ul{
+.navegacion{
     display: flex;
     justify-content: space-around;
-    
+   
 }
 .navegacion ul li a{
     text-decoration: none;
     color: black;
-    padding: 20px;
-   
+    padding: 20px 50px;
+    
 }
 .navegacion ul li{
      list-style: none;
      display: inline-flex;
     line-height: 20px;
-    float: left;
     transition: all 500ms;
+    
     
 }
 .header {
     align-items: center;
-    /* background-color: #fd6e21; */
-    background-color: #bc6f0ada;
-    padding: 0px 0px;
+    background-color: #fd6e21;
+    padding: 0px;
+    
 }
 
 .navegacion>ul>li:hover{
     background-color: #dc4d00;
     
 }
-input{
-    position:relative ;
-    top: 15px;
-    right: 15px;
-    max-height: 25px;
-}
+
