@@ -5,6 +5,7 @@ import { VoleyComponent } from './Deportes/voley/voley.component';
 import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { BasquetComponent } from './Deportes/basquet/basquet.component';
 import { DeportesComponent } from './Deportes/deportes.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'Futbol', component: FutbolComponent},
   {path:'Basquet', component: BasquetComponent},
   {path:'Deportes', component: DeportesComponent},
+  {path:'Contacto', component: ContactoComponent},
   {path: '**', component:HomeComponent }
 ];
 
