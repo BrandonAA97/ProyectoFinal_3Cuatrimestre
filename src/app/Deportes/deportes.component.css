@@ -38,7 +38,7 @@
 }
 
 .container {
-    margin-left: 0;
+    margin-left: 5%;
     align-content: flex-start;
     
     display: grid;

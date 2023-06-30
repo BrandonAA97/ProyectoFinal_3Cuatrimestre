@@ -46,12 +46,6 @@ ngOnInit():void{
       url: 'https://youtu.be/Fs49FDcxhFE',
     },
     {
-      titulo: 'Argentina vs Camerún - Copa del Mundo Japón 2019 - FIVB Volleyball World Cup',
-      subtitulo: '3 - 1',
-      image: 'https://d3b5jqy5xuub7g.cloudfront.net/wp-content/uploads/2019/09/voley.jpg',
-      url: 'https://youtu.be/vOoYqqQ3P1E',
-    },
-    {
       titulo: 'Argentina vs Brasil (Copa América 2021)',
       subtitulo: '1 - 0',
       image:'/assets/img-videos/Argentina vs Brasil (Copa América 2021).jpeg',
@@ -82,12 +76,6 @@ ngOnInit():void{
       url: 'https://www.youtube.com/watch?v=SP4y-22R1B8&pp=ygUdcGFydGlkb3MgZW50ZXJvcyBkZSBhcmdlbnRpbmE%3D',
     },
     {
-      titulo: 'Argentina vs Colombia - Copa América 2015 - Partido completo',
-      subtitulo: '0(5) - 0(4)',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPw-7lt3OX_MmeyZQzCsIWYNq7nRjduPZijg&usqp=CAU',
-      url: 'https://youtu.be/XtRG2O4uVlA',
-    },
-    {
       titulo: 'Argentina vs Brasil (FIBA AmeriCup 2022 - Final)',
       subtitulo: '75 - 73',
       image:'/assets/img-videos/Argentina vs Brasil (FIBA AmeriCup 2022 - Final).png',
@@ -116,12 +104,6 @@ ngOnInit():void{
       subtitulo: '88 - 76',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlC3osRwS7r2gzhjW299_bL6kkDtsRB3UgC74LSFOftNoPT9BtcbUO8ukqh6NgvVZOzoM&usqp=CAU',
       url: 'https://www.youtube.com/watch?v=zE6yWucpPJk&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
-    },
-    {
-      titulo: 'Argentina vs. Ecuador - Full Basketball Game - FIBA U18 Americas Championship 2022',
-      subtitulo: '92 - 47',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLk8HpFVCqoc5ZBtK-ID6q_hyXFrsc1CNiFMrxmMfF5vkwv5PH7WUasKIcUijE4A7Ff-s&usqp=CAU',
-      url: 'https://www.youtube.com/watch?v=Vi06ZxXhCaw&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
     },
   ]
 }
