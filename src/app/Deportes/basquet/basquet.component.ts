@@ -32,6 +32,24 @@ export class BasquetComponent implements OnInit{
         image:'/assets/img-videos/Argentina - USA (Juegos Olímpicos 2004).jpeg',
         url: 'https://www.youtube.com/watch?v=K5PFNpiP5aY',
       },
+      {
+        titulo: 'Argentina vs España - Partido Completo - Mundial de Básquet China 2019 - Final - Campeón',
+        subtitulo: '75 - 95',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfVoS1Kjx6EuBP7jEXXP5cSXekK9WuQnRnjg&usqp=CAU',
+        url: 'https://www.youtube.com/watch?v=_ZaKMFUh4lQ&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
+      },
+      {
+        titulo: 'Argentina v Korea - Full Basketball Game - FIBA U19 Basketball World Cup 2023',
+        subtitulo: '88 - 76',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlC3osRwS7r2gzhjW299_bL6kkDtsRB3UgC74LSFOftNoPT9BtcbUO8ukqh6NgvVZOzoM&usqp=CAU',
+        url: 'https://www.youtube.com/watch?v=zE6yWucpPJk&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
+      },
+      {
+        titulo: 'Argentina vs. Ecuador - Full Basketball Game - FIBA U18 Americas Championship 2022',
+        subtitulo: '92 - 47',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLk8HpFVCqoc5ZBtK-ID6q_hyXFrsc1CNiFMrxmMfF5vkwv5PH7WUasKIcUijE4A7Ff-s&usqp=CAU',
+        url: 'https://www.youtube.com/watch?v=Vi06ZxXhCaw&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
+      },
       
     ]
   }

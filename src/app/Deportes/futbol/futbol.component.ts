@@ -32,6 +32,24 @@ export class FutbolComponent implements OnInit{
         image:'/assets/img-videos/Argentina vs Francia (Mundial Qatar 2022 - Final).jpeg',
         url: 'https://youtu.be/2OKjdR3vvQE',
       },
+      {
+        titulo: 'Argentina vs Colombia - Semifinal Copa América 2021 - Partido Completo',
+        subtitulo: '1(3) - 1(2)',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVf9uQ8lH-gBYCh2JhmSUU66vdkBVfQUh8rA&usqp=CAU',
+        url: 'https://youtu.be/7QeRMF5cR1Y',
+      },
+      {
+        titulo: 'Argentina vs Uruguay - Eliminatorias Sudamericanas Qatar 2022 - Partido Completo',
+        subtitulo: '3 - 0',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu9AL7YotdN0Pus_JhAflKipT2jvdEn5zXEg&usqp=CAU',
+        url: 'https://www.youtube.com/watch?v=SP4y-22R1B8&pp=ygUdcGFydGlkb3MgZW50ZXJvcyBkZSBhcmdlbnRpbmE%3D',
+      },
+      {
+        titulo: 'Argentina vs Colombia - Copa América 2015 - Partido completo',
+        subtitulo: '0(5) - 0(4)',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPw-7lt3OX_MmeyZQzCsIWYNq7nRjduPZijg&usqp=CAU',
+        url: 'https://youtu.be/XtRG2O4uVlA',
+      },
     ]
   }
 }

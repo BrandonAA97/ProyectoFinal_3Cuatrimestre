@@ -34,6 +34,24 @@ ngOnInit():void{
       url: 'https://www.youtube.com/watch?v=aGuNrODMnCw&pp=ygUmYXJnZW50aW5hIHZzIGVzdGFkb3MgdW5pZG9zIHZvbGV5IGpqb28%3D',
     },
     {
+      titulo: 'Argentina vs Perú - Clasificatorio a los Juegos Panamericanos 2023',
+      subtitulo: '3 - 0',
+      image: 'https://elcomercio.pe/resizer/_zrJfGNdT3JwLhWVSryaoe5OKJY=/980x528/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/OWN4V2A36BHNFJR2DSPDEXIBHU.jpg',
+      url: 'https://youtu.be/bODo8ey82YU',
+    },
+    {
+      titulo: 'Argentina vs Colombia - Clasificatorio a los Juegos Panamericanos 2023 ',
+      subtitulo: '3 - 1',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWwC8-AXtr07g_nQLfedxpetk0QIv82MVTKQ&usqp=CAU',
+      url: 'https://youtu.be/Fs49FDcxhFE',
+    },
+    {
+      titulo: 'Argentina vs Camerún - Copa del Mundo Japón 2019 - FIVB Volleyball World Cup',
+      subtitulo: '3 - 1',
+      image: 'https://d3b5jqy5xuub7g.cloudfront.net/wp-content/uploads/2019/09/voley.jpg',
+      url: 'https://youtu.be/vOoYqqQ3P1E',
+    },
+    {
       titulo: 'Argentina vs Brasil (Copa América 2021)',
       subtitulo: '1 - 0',
       image:'/assets/img-videos/Argentina vs Brasil (Copa América 2021).jpeg',
@@ -52,6 +70,24 @@ ngOnInit():void{
       url: 'https://youtu.be/2OKjdR3vvQE',
     },
     {
+      titulo: 'Argentina vs Colombia - Semifinal Copa América 2021 - Partido Completo',
+      subtitulo: '1(3) - 1(2)',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVf9uQ8lH-gBYCh2JhmSUU66vdkBVfQUh8rA&usqp=CAU',
+      url: 'https://youtu.be/7QeRMF5cR1Y',
+    },
+    {
+      titulo: 'Argentina vs Uruguay - Eliminatorias Sudamericanas Qatar 2022 - Partido Completo',
+      subtitulo: '3 - 0',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu9AL7YotdN0Pus_JhAflKipT2jvdEn5zXEg&usqp=CAU',
+      url: 'https://www.youtube.com/watch?v=SP4y-22R1B8&pp=ygUdcGFydGlkb3MgZW50ZXJvcyBkZSBhcmdlbnRpbmE%3D',
+    },
+    {
+      titulo: 'Argentina vs Colombia - Copa América 2015 - Partido completo',
+      subtitulo: '0(5) - 0(4)',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPw-7lt3OX_MmeyZQzCsIWYNq7nRjduPZijg&usqp=CAU',
+      url: 'https://youtu.be/XtRG2O4uVlA',
+    },
+    {
       titulo: 'Argentina vs Brasil (FIBA AmeriCup 2022 - Final)',
       subtitulo: '75 - 73',
       image:'/assets/img-videos/Argentina vs Brasil (FIBA AmeriCup 2022 - Final).png',
@@ -68,6 +104,24 @@ ngOnInit():void{
       subtitulo: '81 - 72',
       image:'/assets/img-videos/Argentina - USA (Juegos Olímpicos 2004).jpeg',
       url: 'https://www.youtube.com/watch?v=K5PFNpiP5aY',
+    },
+    {
+      titulo: 'Argentina vs España - Partido Completo - Mundial de Básquet China 2019 - Final - Campeón',
+      subtitulo: '75 - 95',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfVoS1Kjx6EuBP7jEXXP5cSXekK9WuQnRnjg&usqp=CAU',
+      url: 'https://www.youtube.com/watch?v=_ZaKMFUh4lQ&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
+    },
+    {
+      titulo: 'Argentina v Korea - Full Basketball Game - FIBA U19 Basketball World Cup 2023',
+      subtitulo: '88 - 76',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlC3osRwS7r2gzhjW299_bL6kkDtsRB3UgC74LSFOftNoPT9BtcbUO8ukqh6NgvVZOzoM&usqp=CAU',
+      url: 'https://www.youtube.com/watch?v=zE6yWucpPJk&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
+    },
+    {
+      titulo: 'Argentina vs. Ecuador - Full Basketball Game - FIBA U18 Americas Championship 2022',
+      subtitulo: '92 - 47',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLk8HpFVCqoc5ZBtK-ID6q_hyXFrsc1CNiFMrxmMfF5vkwv5PH7WUasKIcUijE4A7Ff-s&usqp=CAU',
+      url: 'https://www.youtube.com/watch?v=Vi06ZxXhCaw&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
     },
   ]
 }
