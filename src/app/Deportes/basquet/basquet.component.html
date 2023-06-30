@@ -1,13 +1,24 @@
 <div class="busq-contenido">
-    <input class="busq-input" type="text" name="datoBuscado" placeholder="Escribir algo aquí" [(ngModel)]="datoBuscado">
+  <input
+    class="busq-input"
+    type="text"
+    name="datoBuscado"
+    placeholder="Buscar"
+    [(ngModel)]="datoBuscado"
+  />
 </div>
-<div class="futbol">
-    <ul>
-        <li class="grid" *ngFor="let datos of arregloTarjetaBasquet | filtro: datoBuscado">
-            <br>
-            <div class="title">{{datos.titulo}}</div>
-            <div class="sub-title">{{datos.subtitulo}}</div>
-            <a [href]="datos.url" target="_blank"> <img class="image" [src]="datos.image" ></a>
-        </li>
-    </ul>
+<div class="container">
+  <ul>
+    <li
+      class="grid"
+      *ngFor="let datos of arregloTarjetaBasquet | filtro : datoBuscado"
+    >
+      
+      <div class="title">{{ datos.titulo }}</div>
+      <div class="sub-title">{{ datos.subtitulo }}</div>
+      <a [href]="datos.url" target="_blank">
+        <img class="image" [src]="datos.image"
+      /></a>
+    </li>
+  </ul>
 </div>
