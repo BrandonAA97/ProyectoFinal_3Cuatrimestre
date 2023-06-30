@@ -1,50 +1,31 @@
-<div class="busq-contenido">
-  <h3>Filtrando en Voley</h3>
-  <input
-    class="busq-input"
-    type="text"
-    name="datoBuscado"
-    placeholder="Buscar"
-    [(ngModel)]="datoBuscado"
-  />
-</div>
-<div class="container">
-  <ul>
-    <li
-      class="grid"
-      *ngFor="let video of arregloTarjetaVoley | filtro : datoBuscado"
-    >
-      
-      <h3 class="busq-title">{{ video.titulo }}</h3>
-      <div class="busq-sub-title">{{ video.subtitulo }}</div>
-      
-      <a [href]="video.url" target="_blank">
-        <img class="image" [src]="video.image" />
-      </a>
-    </li>
-  </ul>
-</div>
-<!--   <div> 
-        <ul class="busq">
-            <li class="grid" *ngFor="let video of videoEncontrado">
-                <br>
-            <h3 class="busq-title">{{video.titulo}}</h3>  
-            <div class="busq-sub-title">{{video.subtitulo}}</div><br>
-            <a [href]="video.url" target="_blank"> 
-                <img class="image" [src]="video.image"> 
-            </a>
-        </li>
-        </ul>
-    </div>
-</div>
+<body class="body">
+  <div class="background-container">
+    <div class="background-image">
+      <div class="busq-contenido">
+        <h3>Filtrando en Voley</h3>
+        <input
+          class="busq-input"
+          type="text"
+          name="datoBuscado"
+          placeholder="Buscar"
+          [(ngModel)]="datoBuscado"
+        />
+      </div>
+      <div class="container">
+        <ul>
+          <li
+            class="grid"
+            *ngFor="let video of arregloTarjetaVoley | filtro : datoBuscado"
+          >
+            <h3 class="busq-title">{{ video.titulo }}</h3>
+            <div class="busq-sub-title">{{ video.subtitulo }}</div>
 
-<div class="voley">
-    <ul>
-        <li class="grid" *ngFor="let datos of arregloTarjetaVoley">
-            <br>
-            <div class="title">{{datos.titulo}}</div>
-            <div class="sub-title">{{datos.subtitulo}}</div><br>
-            <a [href]="datos.url" target="_blank"> <img class="image" [src]="datos.image"> </a>
-        </li>
-    </ul>
-</div> -->
+            <a [href]="video.url" target="_blank">
+              <img class="image" [src]="video.image" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

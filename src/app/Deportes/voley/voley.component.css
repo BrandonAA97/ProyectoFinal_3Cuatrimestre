@@ -8,7 +8,7 @@
     max-width: auto;
     max-height: 200px;
     margin: auto auto 10px auto;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5)
     
 }
@@ -74,4 +74,21 @@
 
 .busq-input:focus {
     border-color: 2px solid #70b231;
+}
+.background-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+  
+  .background-image {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size:cover ;
+    background-image: url(/assets/img/fondo-voley.jpg);
+    background-image: no-repeat;
 }

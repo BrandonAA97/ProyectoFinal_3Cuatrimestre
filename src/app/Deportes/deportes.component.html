@@ -1,28 +1,30 @@
 <body class="body">
   <div class="background-container">
-  <div class="background-image">
-<div class="busq-contenido">
-  <input
-    class="busq-input"
-    type="text"
-    name="datoBuscado"
-    placeholder="Buscar"
-    [(ngModel)]="datoBuscado"
-  />
-</div>
+    <div class="background-image">
+      <div class="busq-contenido">
+        <input
+          class="busq-input"
+          type="text"
+          name="datoBuscado"
+          placeholder="Buscar"
+          [(ngModel)]="datoBuscado"
+        />
+      </div>
 
-<div class="container">
-  <ul>
-    <li
-      class="grid"
-      *ngFor="let video of arregloDeportes | filtro : datoBuscado">
+      <div class="container">
+        <ul>
+          <li
+            class="grid"
+            *ngFor="let video of arregloDeportes | filtro : datoBuscado">
+            <h3 class="busq-title">{{ video.titulo }}</h3>
+            <h3 class="busq-sub-title">{{ video.subtitulo }}</h3>
 
-      <h3 class="busq-title">{{ video.titulo }}</h3>
-      <h3 class="busq-sub-title">{{ video.subtitulo }}</h3>
-
-       <a [href]="video.url" target="_blank">
-        <img class="image" [src]="video.image" />
-      </a>
-    </li>
-  </ul>
-</div>
+            <a [href]="video.url" target="_blank">
+              <img class="image" [src]="video.image" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

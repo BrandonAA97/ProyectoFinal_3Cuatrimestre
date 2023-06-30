@@ -1,27 +1,30 @@
-<body class = "body">
-<div class="busq-contenido">
-  <h3>Filtrando en Basquet</h3>
-  <input
-    class="busq-input"
-    type="text"
-    name="datoBuscado"
-    placeholder="Buscar"
-    [(ngModel)]="datoBuscado"
-  />
-</div>
-<div class="container">
-  <ul>
-    <li
-      class="grid"
-      *ngFor="let datos of arregloTarjetaBasquet | filtro : datoBuscado"
-    >
-      
-      <div class="title">{{ datos.titulo }}</div>
-      <div class="sub-title">{{ datos.subtitulo }}</div>
-      <a [href]="datos.url" target="_blank">
-        <img class="image" [src]="datos.image"
-      /></a>
-    </li>
-  </ul>
-</div>
+<body class="body">
+  <div class="background-container">
+    <div class="background-image">
+      <div class="busq-contenido">
+        <h3>Filtrando en Basquet</h3>
+        <input
+          class="busq-input"
+          type="text"
+          name="datoBuscado"
+          placeholder="Buscar"
+          [(ngModel)]="datoBuscado"
+        />
+      </div>
+      <div class="container">
+        <ul>
+          <li
+            class="grid"
+            *ngFor="let datos of arregloTarjetaBasquet | filtro : datoBuscado"
+          >
+            <div class="title">{{ datos.titulo }}</div>
+            <div class="sub-title">{{ datos.subtitulo }}</div>
+            <a [href]="datos.url" target="_blank">
+              <img class="image" [src]="datos.image"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>

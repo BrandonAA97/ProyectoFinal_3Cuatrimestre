@@ -24,8 +24,7 @@
   @keyframes changeBackground {
     0% { background-image: url(/assets/img/fondo-futbol.jpg); }
     50% { background-image: url(/assets/img/fondo-basquet.jpg);}
-    100% { background-image: url(/assets/img/voley1.jpg);}
-    
+    100% { background-image: url(/assets/img/fondo-voley.jpg);}
   }
 
 .image {
@@ -34,22 +33,23 @@
     max-height: 200px;
     margin: auto auto 10px auto;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     
 }
 
 .container {
-    margin: 0 auto;
+    margin-left: 0;
+    align-content: flex-start;
     
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 .container>ul {
     
     display: grid;
     padding: 0px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .grid{
