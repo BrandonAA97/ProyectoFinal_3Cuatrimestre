@@ -1,27 +1,26 @@
-  <body class="body" src="/assets/img/fondo-futbol.jpg">
-    
-  
-<div class="busq-contenido">
-  <input
-    class="busq-input"
-    type="text"
-    name="datoBuscado"
-    placeholder="Buscar"
-    [(ngModel)]="datoBuscado"
-  />
-</div>
-<div class="container">
-  <ul>
-    <li
-      class="grid"
-      *ngFor="let datos of arregloTarjetaFutbol | filtro : datoBuscado"
-    >
-      <div class="title">{{ datos.titulo }}</div>
-      <div class="sub-title">{{ datos.subtitulo }}</div>
-      <a [href]="datos.url" target="_blank">
-        <img class="image" [src]="datos.image"
-      /></a>
-    </li>
-  </ul>
-</div>
+<body class="body" src="/assets/img/fondo-futbol.jpg">
+  <div class="busq-contenido">
+    <h3>Filtrando en Futbol</h3>
+    <input
+      class="busq-input"
+      type="text"
+      name="datoBuscado"
+      placeholder="Buscar"
+      [(ngModel)]="datoBuscado"
+    />
+  </div>
+  <div class="container">
+    <ul>
+      <li
+        class="grid"
+        *ngFor="let datos of arregloTarjetaFutbol | filtro : datoBuscado"
+      >
+        <div class="title">{{ datos.titulo }}</div>
+        <div class="sub-title">{{ datos.subtitulo }}</div>
+        <a [href]="datos.url" target="_blank">
+          <img class="image" [src]="datos.image"
+        /></a>
+      </li>
+    </ul>
+  </div>
 </body>
