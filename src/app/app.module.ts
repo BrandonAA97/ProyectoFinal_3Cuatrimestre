@@ -11,6 +11,7 @@ import { BasquetComponent } from './Deportes/basquet/basquet.component';
 import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { DeportesComponent } from './Deportes/deportes.component';
 import { FooterComponent } from './footer/footer.component';
+import { cuentaComponent } from './cuentaUsuario/cuenta.component';
 
 import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
@@ -30,7 +31,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     DeportesComponent,
     FiltroPipe,
     FooterComponent,
-    ContactoComponent
+    ContactoComponent,
+    cuentaComponent
   ],
   imports: [
     BrowserModule,
