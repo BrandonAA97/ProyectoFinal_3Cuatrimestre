@@ -6,11 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./crearCuenta.component.css']
 })
 export class crearCuentaComponent {
-    nombre!: string;
-    Apellido!: string;
-    correo!: string;
-crearCuenta() {
-throw new Error('Method not implemented.');
-}
+    
 
 }
