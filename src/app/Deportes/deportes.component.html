@@ -15,7 +15,7 @@
         <ul>
           <li
             class="grid"
-            *ngFor="let video of arregloDeportes | filtro : datoBuscado">
+            *ngFor="let video of video | filtro : datoBuscado">
             <h3 class="busq-title">{{ video.titulo }}</h3>
             <h3 class="busq-sub-title">{{ video.subtitulo }}</h3>
 
