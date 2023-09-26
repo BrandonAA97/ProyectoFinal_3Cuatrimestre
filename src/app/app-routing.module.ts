@@ -20,9 +20,10 @@ const routes: Routes = [
   {path:'Basquet', component: BasquetComponent},
   {path:'Deportes', component: DeportesComponent},
   {path:'Contacto', component: ContactoComponent},
-  {path:'Ingresar', component: loginComponent},
-  {path:'CrearCuenta', component: crearCuentaComponent},
-  {path:'Cuenta', component: cuentaComponent},
+  {path:'cuenta', component: cuentaComponent},
+  {path:'Login', component: loginComponent},
+  {path:'crearCuenta', component: crearCuentaComponent},
+  
   {path: '**', component:HomeComponent },
 ];
 
