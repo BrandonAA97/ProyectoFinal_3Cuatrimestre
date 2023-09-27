@@ -17,6 +17,7 @@ import { cuentaComponent } from './cuentaUsuario/cuenta.component';
 import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 
 
@@ -34,7 +35,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     FiltroPipe,
     FooterComponent,
     ContactoComponent,
-    cuentaComponent
+    cuentaComponent,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,13 @@ export class Videos {
       public url: string,
     ){}
   }
-  
+// export class Video {
+//   constructor(
+//     public name: string,
+//     public categoria: string,
+//     public url : string,
+//   ){}
+// }
 export class Cuenta {
     constructor(
       public nombre: string,

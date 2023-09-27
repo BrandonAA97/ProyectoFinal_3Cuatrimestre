@@ -24,7 +24,9 @@ export class videosService {
         return this.http.delete(`${this.baseURL}/${titulo}`);
     }
 
-    
+    urlVideo(url:string) : Observable <String>{
+        return this.http.get<String>(`${this.baseURL}/${url}`);
+    }
 
 }
 

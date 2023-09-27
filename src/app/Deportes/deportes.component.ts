@@ -18,7 +18,7 @@ export class DeportesComponent implements OnInit  {
 
   datoBuscado=''
 
-  ngOnInit():void{
+  ngOnInit(){
     this.obtenerLosVideos();
   }
 
@@ -28,6 +28,8 @@ export class DeportesComponent implements OnInit  {
       console.log(res);
     });
   }
+  public guardarUrl(){
 
+  }
 }
 
