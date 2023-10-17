@@ -15,13 +15,9 @@
         <ul>
           <li
             class="grid"
-            *ngFor="let datos of arregloTarjetaBasquet | filtro : datoBuscado"
-          >
-            <div class="title">{{ datos.titulo }}</div>
-            <div class="sub-title">{{ datos.subtitulo }}</div>
-            <a [href]="datos.url" target="_blank">
-              <img class="image" [src]="datos.image"
-            /></a>
+            *ngFor="let video of video | filtro : datoBuscado">
+            <h3 class="busq-title">{{ video.titulo }}</h3>
+            <a [routerLink]="['/Reproductor', video.id]">link</a>
           </li>
         </ul>
       </div>

@@ -8,6 +8,7 @@ import { Videos } from "../models/models";
 })
 export class videosService {
     private baseURL = "http://localhost:8080/api/v1";
+    //private baseVideoURL = "http://localhost:8080";
 
     constructor(private http: HttpClient){}
 
@@ -24,10 +25,15 @@ export class videosService {
         return this.http.delete(`${this.baseURL}/${titulo}`);
     }
 
-    urlVideo(url:string) : Observable <String>{
+     urlVideo(url:string) : Observable <String>{
         return this.http.get<String>(`${this.baseURL}/${url}`);
     }
-
+    obtenerUrlVideo(id: number): Observable<Videos> {
+        return this.http.get<Videos>(`${this.baseURL}/find/videos/${id}`);
+             
+    }
+        
+    
 }
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Videos } from '../models/models';
 import { videosService } from '../services/videos.service';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,10 +14,12 @@ export class DeportesComponent implements OnInit  {
 
   video : Videos[] = [];
   
-  constructor(private service:videosService){}
+  constructor(private service:videosService, private router: Router){}
 
-  datoBuscado=''
-
+  datoBuscado='';
+  videoSeleccionado?: Videos;
+  videoUrl?: String;
+  
   ngOnInit(){
     this.obtenerLosVideos();
   }
@@ -28,8 +30,6 @@ export class DeportesComponent implements OnInit  {
       console.log(res);
     });
   }
-  public guardarUrl(){
-
-  }
+   
 }
 

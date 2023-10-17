@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { SubirVideoComponent } from './subir-video/subir-video.component';
 
 
 
@@ -36,7 +37,8 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     FooterComponent,
     ContactoComponent,
     cuentaComponent,
-    ReproductorComponent
+    ReproductorComponent,
+    SubirVideoComponent
   ],
   imports: [
     BrowserModule,

@@ -41,16 +41,18 @@
 .container {
     margin-left: 5%;
     align-content: flex-start;
-    
+   
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    
 }
 
 .container>ul {
-    
+   
     display: grid;
     padding: 0px;
-    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+    
 }
 
 .grid{

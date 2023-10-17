@@ -1,18 +1,14 @@
 export class Videos {
     constructor(
+      public id: number,
       public titulo: string,
       public subtitulo: string,
       public image: string,
       public url: string,
+      public categoria: string
     ){}
   }
-// export class Video {
-//   constructor(
-//     public name: string,
-//     public categoria: string,
-//     public url : string,
-//   ){}
-// }
+
 export class Cuenta {
     constructor(
       public nombre: string,

@@ -1,16 +1,18 @@
 import { Pipe, PipeTransform } from "@angular/core";
+import { Videos } from '../../models/models';
 @Pipe({
     name: "filtro"
 })
 export class FiltroPipe implements PipeTransform{
-    transform(value: any, ...arg: any): any {
-        const resultadoVideos =[]
-        for (const video of value){
-            if (video.titulo.toLocaleLowerCase().indexOf(arg) > -1){
-                resultadoVideos.push(video)
-            }
+    transform(videos: Videos[], titulo: string): Videos[] {
+        console.log(videos)
+        console.log(titulo)
+        if (!videos || !titulo){
+            return videos
         }
-        return resultadoVideos
+        return videos.filter(video =>
+            video.titulo.toLowerCase().includes(titulo.toLowerCase())
+        )
     }
 
 

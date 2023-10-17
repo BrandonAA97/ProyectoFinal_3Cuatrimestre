@@ -12,6 +12,7 @@ import { loginComponent } from './cuentaUsuario/login/login.component';
 import { crearCuentaComponent } from './cuentaUsuario/crearCuenta/crearCuenta.component'
 import { cuentaComponent } from './cuentaUsuario/cuenta.component'
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { SubirVideoComponent } from './subir-video/subir-video.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,12 +21,12 @@ const routes: Routes = [
   {path:'Futbol', component: FutbolComponent},
   {path:'Basquet', component: BasquetComponent},
   {path:'Deportes', component: DeportesComponent},
-  {path:'Reproductor', component: ReproductorComponent},
+  {path:'Reproductor/:id', component: ReproductorComponent},
   {path:'Contacto', component: ContactoComponent},
   {path:'cuenta', component: cuentaComponent},
   {path:'Login', component: loginComponent},
-  
   {path:'crearCuenta', component: crearCuentaComponent},
+  {path:'Subir',component: SubirVideoComponent},
   
   {path: '**', component:HomeComponent },
 ];
