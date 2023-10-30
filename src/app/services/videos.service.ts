@@ -30,7 +30,9 @@ export class videosService {
     }
     obtenerUrlVideo(id: number): Observable<Videos> {
         return this.http.get<Videos>(`${this.baseURL}/find/videos/${id}`);
-             
+    }
+    cargarVideo(formData: FormData): Observable<any>{
+        return this.http.post(`${this.baseURL}/subir`, formData)
     }
         
     

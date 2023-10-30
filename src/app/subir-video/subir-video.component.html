@@ -11,13 +11,12 @@
             <input [(ngModel)]="video.subtitulo" id="subtitulo" type="text" name="subtitulo" required>
         </div> 
         <div>
-            <label for="url">Url</label>
-            <input [(ngModel)]="video.url" id="url" type="text" name="url" required>
-
+            <label for="video">Video:</label>
+            <input [(ngModel)]="video.url" type="file"  accept="video/*" id="video" name="video" required>
         </div>
         <div>
             <label for="image">imagen</label>
-            <input [(ngModel)]="video.image" id="image" type="text" name="image">
+            <input [(ngModel)]="video.image" type="file" accept="image/*" id="image" name="image" >
         </div>
         <div>
             <label for="categoria">Categoria</label>
@@ -28,7 +27,7 @@
             </select>
             
         </div>
-        <button (click)="subir()">Subir</button>
+        <button (click)="subir(video)">Subir</button>
     </form>
      
 </div>

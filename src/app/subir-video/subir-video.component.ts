@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { videosService } from '../services/videos.service';
 import { Videos } from '../models/models';
+import { MediaService } from '../services/media.service';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-subir-video',
@@ -9,17 +12,37 @@ import { Videos } from '../models/models';
 })
 export class SubirVideoComponent {
 
+ 
+constructor(
+  private service: videosService, 
+  private mediaService: MediaService, 
+  private http: HttpClient,
+  private fb: FormBuilder
+  ){}
 
-constructor(private service: videosService){}
+  video: Videos = new Videos(0, '', '', '', '', '') 
 
-video: Videos = new Videos(0, '', '', '', '', '');
+  subirVideo(event: any){
+    const file = event.target.files[0]
 
-subir() {
-   this.service.agregarVideo(this.video)
-    .subscribe(data=>{
-      alert("se subio el video");
+    if(file){
+      const fb = new FormData();
+      fb.append('file', file);
+
+      this.mediaService.subirFichero(fb)
+      .subscribe(response =>{
+        console.log('response', response)
+      });
+    }
+  }
+  subir(video:Videos){
+    this.service.agregarVideo(video)
+    .subscribe(data =>{
+      alert("Video agregado!");
     })
-    
+  }
+  }
 
-}
-}
+
+
+
