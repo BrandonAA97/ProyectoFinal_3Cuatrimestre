@@ -70,7 +70,7 @@ export class FutbolComponent implements OnInit{
   }
   private videosFutbol(){
     this.video = this.video.filter(video => video.categoria ===  'Futbol')
-      
-    
   }
+  
+  
 }
