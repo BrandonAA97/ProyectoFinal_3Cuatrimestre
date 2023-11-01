@@ -18,7 +18,7 @@
             *ngFor="let video of video | filtro : datoBuscado">
             <h3 class="busq-title">{{ video.titulo }}</h3>
             <a [routerLink]="['/Reproductor', video.id]">
-              <img [src]="video.image" alt="link">
+              <img [src]="getImageUrl(video)" alt="link">
             </a>
           </li>
         </ul>
