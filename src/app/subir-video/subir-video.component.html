@@ -1,7 +1,7 @@
 
 <div>
     <h3>Subir video</h3>
-     <form action="">
+     <form action="" enctype="multipart/form-data">
         <div>
             <label for="titulo">Titulo</label>
             <input [(ngModel)]="video.titulo" id="titulo" type="text" name="titulo" required>
@@ -12,11 +12,11 @@
         </div> 
         <div>
             <label for="video">Video:</label>
-            <input [(ngModel)]="video.url" type="file"  accept="video/*" id="video" name="video" required>
+            <input  type="file"  accept="video/*" id="video" name="video" required (change)="capturarArchivo($event)">
         </div>
         <div>
-            <label for="image">imagen</label>
-            <input [(ngModel)]="video.image" type="file" accept="image/*" id="image" name="image" >
+            <label for="image">Imagen:</label>
+            <input  type="file" accept="image/*" id="image" name="image" (change)="capturarArchivo($event)">
         </div>
         <div>
             <label for="categoria">Categoria</label>
@@ -27,7 +27,7 @@
             </select>
             
         </div>
-        <button (click)="subir(video)">Subir</button>
+         <button (click)="subir(video)">Subir</button>
     </form>
      
 </div>

@@ -29,7 +29,7 @@
     display: grid;
     padding: 0px;
     width: 100%;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     
 }
 
@@ -43,6 +43,15 @@
 }
 .grid h3{
     font-size: 18px;
+}
+li{
+    min-height: 160px;
+    min-width: 300px;
+}
+
+img{
+    padding-bottom: 10px;
+    max-height: 150px;
 }
 .busq-title{
    text-align: start;

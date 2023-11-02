@@ -70,7 +70,9 @@ export class BasquetComponent implements OnInit{
   }
   private videosBasquet(){
     this.video = this.video.filter(video => video.categoria ===  'Basquet')
-      
-    
+  }
+  getImageUrl(video: Videos): string {
+    const imageUrl = `http://localhost:8080/imagenes/${video.image}`;
+    return imageUrl;
   }
 }

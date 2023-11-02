@@ -75,8 +75,10 @@ private obtenerLosVideos(){
 }
 private videosVoley(){
   this.video = this.video.filter(video => video.categoria ===  'Voley')
-    
-  
+}
+getImageUrl(video: Videos): string {
+  const imageUrl = `http://localhost:8080/imagenes/${video.image}`;
+  return imageUrl;
 }
 }
 
