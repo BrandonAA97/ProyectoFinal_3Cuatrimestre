@@ -52,7 +52,7 @@ constructor(
       
        const fileNameString = String(fileName);
 
-       this.video.url = "C:/Users/lucas/OneDrive/Desktop/programacion/SF-ReplaySport-con-spingboot/videos/" + fileNameString;
+       this.video.url = fileNameString;
        console.log(this.video.url)
     }
        
@@ -69,7 +69,7 @@ constructor(
        
         const fileNameString = String(fileName);
  
-        this.video.image = "C:/Users/lucas/OneDrive/Desktop/programacion/SF-ReplaySport-con-spingboot/imagenes/" + fileNameString;
+        this.video.image = fileNameString;
         console.log(this.video.image)
       }
        //  this.mediaService.subirFichero(fb)
