@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { TokenService } from "../services/token.service";
+import { AuthService }  from "../services/AuthService";
 
 @Component({
     selector: 'cuenta',
@@ -7,5 +9,9 @@ import { Component } from "@angular/core";
   })
 
 export class cuentaComponent{
-  
+
+  constructor(
+    private tokenService: TokenService,
+    private authService: AuthService
+    ){}
 }
