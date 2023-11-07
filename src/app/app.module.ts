@@ -20,7 +20,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
 
-
+import 'video.js';
 
 
 
@@ -47,6 +47,7 @@ import { SubirVideoComponent } from './subir-video/subir-video.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

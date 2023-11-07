@@ -7,7 +7,7 @@ import { videosService } from 'src/app/services/videos.service';
   selector: 'app-voley',
   templateUrl: './voley.component.html',
   styleUrls: ['./voley.component.css'],
-  
+
 })
 export class VoleyComponent implements OnInit {
 
@@ -21,20 +21,6 @@ datoBuscado=""
 ngOnInit(){
   this.obtenerLosVideos();
   //   this.arregloTarjetaVoley = [
-  //     {
-  //       id: 13,
-  //       titulo: 'Argentina vs Cuba (Amistoso Internacional)',
-  //       subtitulo: '3 - 0',
-  //       image:'/assets/img-videos/Argentina-vs-Cuba-_Amistoso-Internacional_.jpg',
-  //       url: 'https://www.youtube.com/watch?v=obNy5Mi2JoA&pp=ygUFdm9sZXk%3D',
-  //     },
-  //     {
-  //       id: 14,
-  //       titulo: 'Japon vs Argentina (Liga de naciones de voley 2019)',
-  //       subtitulo: '3 - 1',
-  //       image:'/assets/img-videos/Japon vs Argentina (Liga de naciones de voley 2019).jpg',
-  //       url: 'https://www.youtube.com/watch?v=VZCYjClmIFE&t=2183s&pp=ygUFdm9sZXk%3D',
-  //     },
   //     {
   //       id: 15,
   //       titulo: 'USA vs Argentina (Juegos Olímpicos 2021)',
