@@ -13,12 +13,14 @@ import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { DeportesComponent } from './Deportes/deportes.component';
 import { FooterComponent } from './footer/footer.component';
 import { cuentaComponent } from './cuentaUsuario/cuenta.component';
-
+import { loginComponent } from './cuentaUsuario/login/login.component';
+import { crearCuentaComponent } from './cuentaUsuario/crearCuenta/crearCuenta.component';
 import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
+import { AuthService } from './services/Auth.service';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { SubirVideoComponent } from './subir-video/subir-video.component';
     ContactoComponent,
     cuentaComponent,
     ReproductorComponent,
-    SubirVideoComponent
+    SubirVideoComponent,
+    crearCuentaComponent,
+    loginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,7 @@ import { SubirVideoComponent } from './subir-video/subir-video.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:'Login', component: loginComponent},
   {path:'crearCuenta', component: crearCuentaComponent},
   {path:'Subir',component: SubirVideoComponent},
-  
+
   {path: '**', component:HomeComponent },
 ];
 

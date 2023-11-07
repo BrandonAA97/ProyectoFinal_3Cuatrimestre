@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/models/models';
 import { AuthService } from 'src/app/services/Auth.service';
@@ -10,23 +10,24 @@ import { TokenService } from 'src/app/services/token.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class loginComponent {
-  isLogged = false;
-  isLoginFail = false;
-  nuevoUsuario!: LoginUsuario;
-  email = "";
-  nombreUsuario = "";
-  password = "";
-  roles: string[] = [];
-  errMsj = "no funca";
+export class loginComponent implements OnInit{
+
 
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
-    
+
   ) { }
-  
+  isLogged = false;
+  isLoginFail = false;
+  nuevoUsuario!: LoginUsuario;
+  email = "";
+  nombreUsuario= "";
+  password = "";
+  roles: string[] = [];
+  errMsj = "no funca";
+
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
@@ -46,7 +47,7 @@ export class loginComponent {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
       },
       err => {
         this.isLogged = false;
