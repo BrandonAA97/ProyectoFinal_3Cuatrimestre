@@ -10,17 +10,23 @@ export class Videos {
 }
 
 export class nuevoUsuario {
+  nombreUsuario: string;
+    password: string;
     constructor(
       public nombre: string,
-      public apellido: string,
       public correo: string,
-      public contrasenia: string,
-    ){}
+       password: string,
+       nombreUsuario: string
+    ){
+      this.nombreUsuario = nombreUsuario;
+      this.password = password;
+    }
   }
-export class Login {
+export class LoginUsuario {
     constructor(
-      public correo: string,
-      public contrasenia: string,
+      public email: string,
+      public nombreUsuario: string,
+      public password: string
     ){}
 }
 

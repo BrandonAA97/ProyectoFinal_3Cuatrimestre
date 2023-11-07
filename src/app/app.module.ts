@@ -21,9 +21,6 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
