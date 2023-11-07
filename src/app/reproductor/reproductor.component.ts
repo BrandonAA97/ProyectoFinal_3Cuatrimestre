@@ -28,15 +28,11 @@ export class ReproductorComponent implements OnInit{
 
   ngOnInit(){
 
-
     this.route.params.subscribe(params => {
       this.id = params['id'];
       console.log(this.id)
       this.obtenerVideo(this.id);
     });
-
-
-
   }
 
     private obtenerVideo(id: number){
@@ -54,7 +50,7 @@ export class ReproductorComponent implements OnInit{
       });
     }
     cambiarVideo(nuevaURL: String) {
-      // nuevaURL = this.videoUrl;
+
       this.player.pause(); // Pausar el video actual si se está reproduciendo
       this.player.src({ src: nuevaURL, type: 'video/mp4' }); // Cambiar la fuente del video
       this.player.load(); // Recargar el video con la nueva fuente
