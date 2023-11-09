@@ -6,9 +6,9 @@ name: SFRSports-CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "Manu" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Manu" ]
   # Allows you to run this workflow manually from the Actions tab
 jobs:
   # This workflow contains a single job called "build"
