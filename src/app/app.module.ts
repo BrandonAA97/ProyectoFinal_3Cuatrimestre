@@ -14,13 +14,13 @@ import { DeportesComponent } from './Deportes/deportes.component';
 import { FooterComponent } from './footer/footer.component';
 import { cuentaComponent } from './cuentaUsuario/cuenta.component';
 import { loginComponent } from './cuentaUsuario/login/login.component';
-import { crearCuentaComponent } from './cuentaUsuario/crearCuenta/crearCuenta.component';
 import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
 import { AuthService } from './services/Auth.service';
+import { registroComponent } from './cuentaUsuario/registro/registro.component';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { AuthService } from './services/Auth.service';
     cuentaComponent,
     ReproductorComponent,
     SubirVideoComponent,
-    crearCuentaComponent,
+    registroComponent,
     loginComponent
   ],
   imports: [
