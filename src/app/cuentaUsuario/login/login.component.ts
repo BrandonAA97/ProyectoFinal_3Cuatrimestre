@@ -5,29 +5,29 @@ import { AuthService } from 'src/app/services/Auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class loginComponent implements OnInit{
-
+export class loginComponent implements OnInit {
+  isLogged = false;
+  isLoginFail = false;
+  login!: LoginUsuario;
+  email = "";
+  nombreUsuario = "";
+  password = "";
+  roles: string[] = [];
+  errMsj = "no funca";
 
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
-
+    
   ) { }
-  isLogged = false;
-  isLoginFail = false;
-  nuevoUsuario!: LoginUsuario;
-  email = "";
-  nombreUsuario= "";
-  password = "";
-  roles: string[] = [];
-  errMsj = "no funca";
-
+  
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
@@ -38,8 +38,8 @@ export class loginComponent implements OnInit{
   }
 
   onLogin(): void {
-    this.nuevoUsuario =  new LoginUsuario(this.password,this.nombreUsuario, this.email);
-    this.authService.login(this.nuevoUsuario).subscribe(
+    this.login =  new LoginUsuario(this.password,this.nombreUsuario, this.email);
+    this.authService.login(this.login).subscribe(
       data => {
         this.isLogged = true;
 
@@ -47,7 +47,7 @@ export class loginComponent implements OnInit{
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
       },
       err => {
         this.isLogged = false;
