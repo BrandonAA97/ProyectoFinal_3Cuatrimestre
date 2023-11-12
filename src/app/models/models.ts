@@ -10,22 +10,22 @@ export class Videos {
 }
 
 export class nuevoUsuario {
-  nombreUsuario: string;
+    username: string;
     password: string;
     constructor(
       public nombre: string,
-      public correo: string,
+      public email: string,
        password: string,
-       nombreUsuario: string
+       username: string
     ){
-      this.nombreUsuario = nombreUsuario;
+      this.username = username;
       this.password = password;
     }
   }
 export class LoginUsuario {
     constructor(
-      public email: string,
-      public nombreUsuario: string,
+      //public email: string,
+      public username: string,
       public password: string
     ){}
 }
@@ -34,7 +34,7 @@ export class jwtDto{
   constructor(
   public token: string,
   public type: string,
-  public nombreUsuario:string,
+  public username:string,
   public authorities: string[],
   ){}
 }

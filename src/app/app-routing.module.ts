@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'Reproductor/:id', component: ReproductorComponent},
   {path:'Contacto', component: ContactoComponent},
   {path:'cuenta', component: cuentaComponent},
-  {path:'Login', component: loginComponent},
+  {path:'login', component: loginComponent},
   {path:'registro', component: registroComponent},
   {path:'Subir',component: SubirVideoComponent},
   

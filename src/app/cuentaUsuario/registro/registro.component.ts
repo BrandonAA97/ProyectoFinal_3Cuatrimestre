@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class registroComponent {
   nuevoUsuario!: nuevoUsuario;
   nombre: string = "";
-  nombreUsuario: string="";
+  username: string="";
   email: string= "";
   password: string= "";
   errMsj: string= "";

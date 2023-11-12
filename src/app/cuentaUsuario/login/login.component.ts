@@ -16,7 +16,7 @@ export class loginComponent implements OnInit {
   isLoginFail = false;
   login!: LoginUsuario;
   email = "";
-  nombreUsuario = "";
+  username = "";
   password = "";
   roles: string[] = [];
   errMsj = "no funca";
@@ -38,21 +38,21 @@ export class loginComponent implements OnInit {
   }
 
   onLogin(): void {
-    this.login =  new LoginUsuario(this.password,this.nombreUsuario, this.email);
+    this.login =  new LoginUsuario(this.password,this.username);
     this.authService.login(this.login).subscribe(
       data => {
         this.isLogged = true;
-
+        this.isLoginFail = false;
+        
         this.tokenService.setToken(data.token);
-        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setUserName(data.username);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         this.router.navigate(['/']);
-      },
-      err => {
-        this.isLogged = false;
-        this.errMsj = err.error.message;
-        console.log(err.error.message);
+      }, err =>{
+        this.isLogged=false;
+        this.isLoginFail = true;
+        console.log(this.errMsj = "no funca");
       }
     );
 
