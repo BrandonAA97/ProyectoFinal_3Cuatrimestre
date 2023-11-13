@@ -86,7 +86,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     /*background-color: #fd6e21;*/
     background-color: azure;
     padding: 0px;
-
+    min-width: 600px;
 }
 .menu{
   display: flex;
@@ -96,7 +96,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
 ul>li>a:hover{
   background-color: #dc4d00;
   transition: 1s;
-  width: 100%;
+
 }
 
 
@@ -108,13 +108,17 @@ ul>li>a:hover{
     position: relative;
   }
   .submenu {
-    display: none; 
+    display: none;
     position: absolute;
     background-color: azure;
-    
+
     top: 100%;
 }
-
+ul>li>a:hover{
+  background-color: #dc4d00;
+  transition: 1s;
+  width: 100%;
+}
 .submenu>li{
     width: 100%;
 }
