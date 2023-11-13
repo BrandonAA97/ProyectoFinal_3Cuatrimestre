@@ -4,8 +4,6 @@ import { Videos } from '../models/models';
 import { MediaService } from '../services/media.service';
 
 
-import { FormBuilder } from '@angular/forms';
-
 @Component({
   selector: 'app-subir-video',
   templateUrl: './subir-video.component.html',
@@ -19,14 +17,10 @@ export class SubirVideoComponent {
 constructor(
   private service: videosService,
   private mediaService: MediaService,
-  private fb: FormBuilder
+
   ){}
 
   video: Videos = new Videos(0, '', '', '', '', '');
-
-
-  // private fileVideo = new File([""], "video", {type: "video/mp4"}).toString;
-  // private fileImg = new File ([""], "image", {type: "image/"}).toString;
 
    capturarArchivo(event: any){
     const file = event.target.files[0]
