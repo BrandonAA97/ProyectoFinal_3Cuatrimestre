@@ -93,12 +93,12 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
   justify-content: space-around;
 }
 
-.menu>li:hover{
+ul>li>a:hover{
   background-color: #dc4d00;
+  transition: 1s;
+  width: 100%;
 }
-.submenu>li:hover{
-  background-color: #dc4d00;
-}
+
 
 @media screen and (max-width: 1080px){
   .navegacion ul li{
@@ -108,18 +108,28 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     position: relative;
   }
   .submenu {
-    /* display: none; */
+    display: none; 
     position: absolute;
     background-color: azure;
-
-    bottom: 0%;
-
+    
+    top: 100%;
 }
 
+.submenu>li{
+    width: 100%;
+}
 #sports:hover .submenu {
     display: block;
 
 }
+ .deportes-arriba>li{
+    display: none;
+ }
+ .logotipo{
+    height: 130px;
+ }
+ .logo img{
+    justify-content: center;
 
-
+ }
 }
