@@ -43,12 +43,12 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     text-align: center;
     padding: 25% 20%;
     cursor: pointer;
-    
+
 }
 .logotipo>ul>li{
     position: relative;
     overflow: hidden;
-    
+
 }
 .logotipo>ul>li:hover span{
     top: 0%;
@@ -62,7 +62,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     text-transform: uppercase;
     cursor: pointer;
 }
-.navegacion {
+.navegacion{
     display: flex;
     justify-content: space-around;
 
@@ -80,10 +80,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     display: inline-flex;
     line-height: 20px;
     transition: all 500ms;
-
-
 }
-
 .header {
     align-items: center;
     /*background-color: #fd6e21;*/
@@ -91,8 +88,38 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(30,34,41,0.96074926552
     padding: 0px;
 
 }
+.menu{
+  display: flex;
+  justify-content: space-around;
+}
 
-.navegacion>ul>li:hover {
-    background-color: #dc4d00;
+.menu>li:hover{
+  background-color: #dc4d00;
+}
+.submenu>li:hover{
+  background-color: #dc4d00;
+}
+
+@media screen and (max-width: 1080px){
+  .navegacion ul li{
+    display: flex;
+  }
+  .menu{
+    position: relative;
+  }
+  .submenu {
+    /* display: none; */
+    position: absolute;
+    background-color: azure;
+
+    bottom: 0%;
+
+}
+
+#sports:hover .submenu {
+    display: block;
+
+}
+
 
 }

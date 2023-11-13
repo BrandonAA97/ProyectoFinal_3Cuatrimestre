@@ -1,18 +1,18 @@
 
 <div class="logotipo">
-  <a class="logo" [routerLink]="['home']"><img src="../assets/img/blanco.png" alt="Logo de la pagina"></a>    
-  
-  <ul> 
+  <a class="logo" [routerLink]="['home']"><img src="../assets/img/blanco.png" alt="Logo de la pagina"></a>
+
+  <ul>
     <li>
-    <img class="deporte" src="../assets/img/futbol.jpeg" alt="Futbol" [routerLink]="['/Futbol']"> 
+    <img class="deporte" src="../assets/img/futbol.jpeg" alt="Futbol" [routerLink]="['/Futbol']">
     <span [routerLink]="['/Futbol']"><h1 [routerLink]="['/Futbol']">Futbol</h1></span>
-  </li>  
+  </li>
   <li>
     <img class="deporte" src="../assets/img/voley-header.jpeg" alt="Voley" [routerLink]="['/Voley']">
     <span [routerLink]="['/Voley']"><h1 [routerLink]="['/Voley']">Voley</h1></span>
   </li>
   <li>
-    <img class="deporte" src="../assets/img/basquet-header.jpg" alt="Basquet" [routerLink]="['/Basquet']"> 
+    <img class="deporte" src="../assets/img/basquet-header.jpg" alt="Basquet" [routerLink]="['/Basquet']">
   <span [routerLink]="['/Basquet']"><h1 [routerLink]="['/Basquet']">Basquet</h1></span>
   </li>
 </ul>
@@ -23,18 +23,17 @@
   <nav class="navegacion">
       <ul class="menu">
         <li><a [routerLink]="['/home']">Inicio</a></li>
-        
-        <li><a [routerLink]="['/Deportes']">Deportes</a></li>
-    
-        <li><a [routerLink]="['/Futbol']">Futbol</a></li>
-        <li><a [routerLink]="['/Voley']">Voley</a></li>
-        <li><a [routerLink]="['/Basquet']">Basquet</a></li>
-          
-        
+        <li id="sports"><a [routerLink]="['/Deportes']">Deportes</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/Futbol']">Futbol</a></li>
+              <li><a [routerLink]="['/Voley']">Voley</a></li>
+              <li><a [routerLink]="['/Basquet']">Basquet</a></li>
+            </ul>
+        </li>
         <li><a [routerLink]="['/Contacto']">Contacto</a></li>
         <li><a [routerLink]="['/cuenta']">Cuenta</a></li>
 
       </ul>
     </nav>
 </div>
-  
+
