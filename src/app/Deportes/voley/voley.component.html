@@ -2,7 +2,7 @@
   <div class="background-container">
     <div class="background-image">
       <div class="busq-contenido">
-        <h3>Filtrando en Voley</h3>
+        <h2 class="categoria">Filtrando en Voley</h2>
         <input
           class="busq-input"
           type="text"
@@ -17,7 +17,9 @@
             class="grid"
             *ngFor="let video of video | filtro : datoBuscado">
             <h3 class="busq-title">{{ video.titulo }}</h3>
-            <a [routerLink]="['/Reproductor', video.id]">link</a>
+            <a [routerLink]="['/Reproductor', video.id]">
+              <img [src]="getImageUrl(video)" alt="link">
+            </a>
           </li>
         </ul>
       </div>

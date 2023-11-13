@@ -30,6 +30,10 @@ export class DeportesComponent implements OnInit  {
       console.log(res);
     });
   }
+  getImageUrl(video: Videos): string {
+    const imageUrl = `http://localhost:8080/imagenes/${video.image}`;
+    return imageUrl;
+  }
    
 }
 
