@@ -31,6 +31,9 @@ jobs:
       # Build app for production
       - name: Build app bundle
         run: npm run build:prod
+        # reute file rename
+      - name: Rename index for routing
+        run: mv dist/SF-Replay-Sport---Frontend/index.html dist/SF-Replay-Sport---Frontend/404.html
       # Deploy to Github pages
       - name: Deploy to Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
