@@ -1,15 +1,11 @@
 
-<div>
+<div class="form-video">
     <h3>Subir video</h3>
      <form action="" enctype="multipart/form-data">
         <div>
-            <label for="titulo">Titulo</label>
+            <label for="titulo">Titulo:</label>
             <input [(ngModel)]="video.titulo" id="titulo" type="text" name="titulo" required>
         </div>
-        <div>
-            <label for="subtitulo">Subtitulo</label>
-            <input [(ngModel)]="video.subtitulo" id="subtitulo" type="text" name="subtitulo" required>
-        </div> 
         <div>
             <label for="video">Video:</label>
             <input  type="file"  accept="video/*" id="video" name="video" required (change)="capturarArchivo($event)">
@@ -25,9 +21,12 @@
                 <option value="Voley">Voley</option>
                 <option value="Basquet">Basquet</option>
             </select>
-            
         </div>
-         <button (click)="subir(video)">Subir</button>
+        <div class="descripcion">
+          <label for="subtitulo">Descripcion:</label>
+          <textarea rows="8" cols="50" [(ngModel)]="video.subtitulo" id="subtitulo" type="text" name="subtitulo" required></textarea>
+      </div>
+         <button class="boton" (click)="subir(video)">Subir</button>
     </form>
-     
+
 </div>
