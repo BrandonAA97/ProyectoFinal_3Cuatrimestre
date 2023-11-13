@@ -13,8 +13,10 @@ export class FutbolComponent implements OnInit{
   video: Videos[]=[];
   constructor(private service:videosService) {}
   datoBuscado=''
-  
+  imageUrl: String="";
+
   ngOnInit() {
+    const videosFromDatabase = []
     this.obtenerLosVideos();
     //this.arregloTarjetaFutbol = [
       // {
@@ -66,11 +68,16 @@ export class FutbolComponent implements OnInit{
       this.video = res;
       console.log(res);
       this.videosFutbol()
+      
     });
   }
   private videosFutbol(){
     this.video = this.video.filter(video => video.categoria ===  'Futbol')
-      
-    
   }
+ 
+  getImageUrl(video: Videos): string {
+    const imageUrl = `http://localhost:8080/imagenes/${video.image}`;
+    return imageUrl;
+  }
+  
 }

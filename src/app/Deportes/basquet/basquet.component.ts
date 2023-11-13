@@ -8,21 +8,15 @@ import { videosService } from 'src/app/services/videos.service';
   styleUrls: ['./basquet.component.css']
 })
 export class BasquetComponent implements OnInit{
-  
+
   // public arregloTarjetaBasquet: Videos[]=[];
   public video:Videos[]=[];
   constructor(private service:videosService) {}
   datoBuscado=''
- 
+
   ngOnInit() {
     this.obtenerLosVideos();
     // this.arregloTarjetaBasquet = [
-    //   { id: 7,
-    //     titulo: 'Argentina vs Brasil (FIBA AmeriCup 2022 - Final)',
-    //     subtitulo: '75 - 73',
-    //     image:'/assets/img-videos/Argentina vs Brasil (FIBA AmeriCup 2022 - Final).png',
-    //     url: 'https://www.youtube.com/live/vIJtw5FJdyU?feature=share',
-    //   },
     //   {
     //     id: 8,
     //     titulo: 'Argentina vs México (FIBA U18 Americas Championship 2022)',
@@ -58,7 +52,7 @@ export class BasquetComponent implements OnInit{
     //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLk8HpFVCqoc5ZBtK-ID6q_hyXFrsc1CNiFMrxmMfF5vkwv5PH7WUasKIcUijE4A7Ff-s&usqp=CAU',
     //     url: 'https://www.youtube.com/watch?v=Vi06ZxXhCaw&pp=ygURYmFzcXVldCBhcmdlbnRpbmE%3D',
     //   },
-      
+
     // ]
   }
   private obtenerLosVideos(){
@@ -70,7 +64,9 @@ export class BasquetComponent implements OnInit{
   }
   private videosBasquet(){
     this.video = this.video.filter(video => video.categoria ===  'Basquet')
-      
-    
+  }
+  getImageUrl(video: Videos): string {
+    const imageUrl = `http://localhost:8080/imagenes/${video.image}`;
+    return imageUrl;
   }
 }

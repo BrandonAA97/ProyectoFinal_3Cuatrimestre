@@ -23,6 +23,10 @@ import { AuthService } from './services/Auth.service';
 import { registroComponent } from './cuentaUsuario/registro/registro.component';
 
 
+import 'video.js';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +51,13 @@ import { registroComponent } from './cuentaUsuario/registro/registro.component';
     FormsModule,
     HttpClientModule
   ],
+
   providers: [AuthService],
   bootstrap: [AppComponent]
+
+  providers: [],
+  bootstrap: [AppComponent],
+
+
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+body{
+  background-color: rgb(35, 33, 33);
+}
+.container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-bottom: 30px;
+}
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
