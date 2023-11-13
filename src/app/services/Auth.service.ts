@@ -9,10 +9,11 @@ export class AuthService{
     private baseURL = "http://localhost:8080/auth/";
 
     constructor(private httpClient: HttpClient){}
+
     public newUs(nuevoUsuario: nuevoUsuario): Observable<any>{
         return this.httpClient.post<any>(this.baseURL + "registerUser", nuevoUsuario);
     }
     public login(login: LoginUsuario): Observable<jwtDto>{
-        return this.httpClient.post<any>(this.baseURL + "login", login);
+        return this.httpClient.post<any>(`${this.baseURL}` + "login", login);
     }
 }
