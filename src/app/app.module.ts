@@ -51,13 +51,8 @@ import 'video.js';
     FormsModule,
     HttpClientModule
   ],
-
   providers: [AuthService],
   bootstrap: [AppComponent]
-
-  providers: [],
-  bootstrap: [AppComponent],
-
 
 })
 export class AppModule { }

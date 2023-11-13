@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginUsuario } from 'src/app/models/models';
+import { LoginUsuario, jwtDto } from 'src/app/models/models';
 import { AuthService } from 'src/app/services/Auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -38,23 +38,24 @@ export class loginComponent implements OnInit {
   }
 
   onLogin(): void {
-    this.login =  new LoginUsuario(this.password,this.username);
-    this.authService.login(this.login).subscribe(
-      data => {
+    this.login = new LoginUsuario( this.username,this.password);
+    this.authService.login(this.login).subscribe({
+      next: (data: jwtDto) => {
         this.isLogged = true;
         this.isLoginFail = false;
-        
+  
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.username);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         this.router.navigate(['/']);
-      }, err =>{
-        this.isLogged=false;
+      },
+      error: (err) => {
+        this.isLogged = false;
         this.isLoginFail = true;
         console.log(this.errMsj = "no funca");
       }
-    );
+    });
+  }
 
-}
 }
