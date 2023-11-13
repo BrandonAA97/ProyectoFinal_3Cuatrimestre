@@ -1,4 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { TokenService } from "../services/token.service";
+import { AuthService }  from "../services/Auth.service";
+import {  nuevoUsuario } from "../models/models";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'cuenta',
@@ -7,5 +11,4 @@ import { Component } from "@angular/core";
   })
 
 export class cuentaComponent{
-  
 }
