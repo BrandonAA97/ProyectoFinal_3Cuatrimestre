@@ -12,14 +12,18 @@ export class Videos {
 export class nuevoUsuario {
     username: string;
     password: string;
+    nombre: string;
+    email: string;
     constructor(
-      public nombre: string,
-      public email: string,
+       nombre: string,
+       username: string,
        password: string,
-       username: string
+       email: string
     ){
       this.username = username;
       this.password = password;
+      this.email = email;
+      this.nombre = nombre;
     }
   }
 export class LoginUsuario {

@@ -1,3 +1,4 @@
+
 # This is a basic workflow to help you get started with Actions
 
 name: SFRSports-CI
@@ -24,19 +25,23 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v4.0.0
         with:
-          node-version: "18"
+          node-version: "20"
       # Install dependencies
       - name: Install deps
         run: npm i 
       # Build app for production
       - name: Build app bundle
         run: npm run build:prod
+      #Route file renamin
+      - name: Rename index for routing
+        run: mv dist/SF-Replay-Sport---Frontend/index.html dist/SF-Replay-Sport---Frontend/404.html
       # Deploy to Github pages
       - name: Deploy to Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with: 
-          build_dir: dist/
+          build_dir: dist/SF-Replay-Sport---Frontend
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          
 
       

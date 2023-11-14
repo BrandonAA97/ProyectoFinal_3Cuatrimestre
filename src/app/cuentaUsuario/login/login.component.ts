@@ -20,6 +20,7 @@ export class loginComponent implements OnInit {
   password = "";
   roles: string[] = [];
   errMsj = "no funca";
+  usuariologueado= "";
 
   constructor(
     private tokenService: TokenService,
@@ -49,6 +50,8 @@ export class loginComponent implements OnInit {
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         this.router.navigate(['/']);
+        this.usuariologueado = this.username;
+        console.log(this.usuariologueado);
       },
       error: (err) => {
         this.isLogged = false;

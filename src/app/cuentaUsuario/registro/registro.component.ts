@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { nuevoUsuario } from 'src/app/models/models';
+import { jwtDto, nuevoUsuario } from 'src/app/models/models';
 import { AuthService } from 'src/app/services/Auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -17,6 +17,8 @@ export class registroComponent {
   password: string= "";
   errMsj: string= "";
   isLogged = false;
+  isRegister = false;
+  isRegisterFail = false;
 
   constructor(
     private tokenService: TokenService,
@@ -30,5 +32,17 @@ export class registroComponent {
   }
 
   onRegister(): void {
+    this.nuevoUsuario = new nuevoUsuario(this.nombre, this.username, this.password,this.email);
+    this.authService.newUs(this.nuevoUsuario).subscribe({
+      next: (data: jwtDto) => {
+        this.isRegister = true;
+        this.isRegisterFail = false;
+        this.router.navigate(["/login"]);
+    }, error: (err) => {
+      this.isRegister= false;
+      this.isRegisterFail= true;
+      this.errMsj = "no capo, corregi y volve";
+    }
+    });
   }
 }
