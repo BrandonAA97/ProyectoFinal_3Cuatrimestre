@@ -59,6 +59,12 @@ export class loginComponent implements OnInit {
         console.log(this.errMsj = "no funca");
       }
     });
+  
+    
+  }
+  
+  offLogin(): void {
+  this.isLogged= false;    
   }
 
 }

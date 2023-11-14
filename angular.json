@@ -64,11 +64,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ProyectoFinal:build:production",
+              "browserTarget": "SF-Replay-Sport---Frontend:build:production",
               "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "browserTarget": "ProyectoFinal:build:development"
+              "browserTarget": "SF-Replay-Sport---Frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ProyectoFinal:build"
+            "browserTarget": "SF-Replay-Sport---Frontend:build"
           }
         },
         "test": {
