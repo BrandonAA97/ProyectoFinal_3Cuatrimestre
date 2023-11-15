@@ -8,7 +8,8 @@ const AUTHORITIES_KEY = "AuthAutorities";
 })
 export class TokenService{
 
-    roles: Array<string> =[];
+     roles: Array<string> =[];
+     rol="";
 
     constructor(){}
 
@@ -35,15 +36,22 @@ export class TokenService{
         window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(authorities));
       }
 
-      public getAuthorities(): string[] {
-        this.roles = [];
-         if (sessionStorage.getItem(AUTHORITIES_KEY)) {
-           JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority: { authority: string; }) => {
-             this.roles.push(authority.authority);
-           });
-         }
-        return this.roles;
-      }
+
+       public getAuthorities(): string []{
+         this.roles = [];
+         const authoritiesString = sessionStorage.getItem(AUTHORITIES_KEY);
+          if (authoritiesString) {
+            const authorities = JSON.parse(authoritiesString) as { authority: string[] }[];
+            if (Array.isArray(authorities)) {
+              console.error('lo devuelve bien', authorities)
+            } else {
+              console.error('El objeto parseado no es un array:', authorities);
+              return authorities
+            }
+          }
+          return this.roles;
+       }
+      
 
       public logOut(): void {
         window.sessionStorage.clear();

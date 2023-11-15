@@ -7,9 +7,8 @@ import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { BasquetComponent } from './Deportes/basquet/basquet.component';
 import { DeportesComponent } from './Deportes/deportes.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { loginComponent } from './cuentaUsuario/login/login.component';
-import { registroComponent } from './cuentaUsuario/registro/registro.component';
-import { cuentaComponent } from './cuentaUsuario/cuenta.component'
+import { loginComponent } from './login/login.component';
+import { registroComponent } from './login/registro/registro.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
 
@@ -23,7 +22,6 @@ const routes: Routes = [
   {path:'Deportes', component: DeportesComponent},
   {path:'Reproductor/:id', component: ReproductorComponent},
   {path:'Contacto', component: ContactoComponent},
-  {path:'cuenta', component: cuentaComponent},
   {path:'login', component: loginComponent},
   {path:'registro', component: registroComponent},
   {path:'Subir',component: SubirVideoComponent},
