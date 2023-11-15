@@ -12,15 +12,14 @@ import { BasquetComponent } from './Deportes/basquet/basquet.component';
 import { FutbolComponent } from './Deportes/futbol/futbol.component';
 import { DeportesComponent } from './Deportes/deportes.component';
 import { FooterComponent } from './footer/footer.component';
-import { cuentaComponent } from './cuentaUsuario/cuenta.component';
-import { loginComponent } from './cuentaUsuario/login/login.component';
+import { loginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { FiltroPipe } from './Deportes/Pipe/filtro.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { SubirVideoComponent } from './subir-video/subir-video.component';
 import { AuthService } from './services/Auth.service';
-import { registroComponent } from './cuentaUsuario/registro/registro.component';
+import { registroComponent } from './login/registro/registro.component';
 
 
 import 'video.js';
@@ -39,7 +38,6 @@ import 'video.js';
     FiltroPipe,
     FooterComponent,
     ContactoComponent,
-    cuentaComponent,
     ReproductorComponent,
     SubirVideoComponent,
     registroComponent,

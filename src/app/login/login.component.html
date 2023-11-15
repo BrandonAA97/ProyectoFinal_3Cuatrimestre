@@ -1,5 +1,6 @@
 
 <div class="text-center" *ngIf="isLogged; else loggedOut">
+<button (ngSubmit)="onLogin()" > Cerrar Cuenta</button>
 
 
 </div>
@@ -34,7 +35,7 @@
                   </div>
                   <div class="form-group">
                       <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
-                          <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+                          <i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
                   </div>
               </form>
           </div>

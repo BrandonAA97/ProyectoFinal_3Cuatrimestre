@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { videosService } from '../services/videos.service';
 import { Videos } from '../models/models';
 import { MediaService } from '../services/media.service';
+import { TokenService } from '../services/token.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,14 +13,32 @@ import { MediaService } from '../services/media.service';
 })
 
 
-export class SubirVideoComponent {
+export class SubirVideoComponent implements OnInit {
   videoUrl?: any;
   videoImg?: any;
+  isLogger=false;
+  username="";
+  
 constructor(
   private service: videosService,
   private mediaService: MediaService,
-
+  private tokenService: TokenService,
+  private router: Router
   ){}
+  ngOnInit() {
+    if(this.tokenService.getAuthorities()){
+    
+    }
+    if(this.tokenService.getToken()){
+      this.isLogger=true;
+      this.username = this.tokenService.getUserName();
+    } else{
+      this.isLogger = false;
+      this.username = "";
+      this.router.navigate(['/']); 
+    }
+  }
+
 
   video: Videos = new Videos(0, '', '', '', '', '');
 
@@ -87,7 +107,7 @@ constructor(
          console.log("video.url: " + this.videoUrl)
         });
 
-    //crea el formdata para almacenar el file con el video que trae this.video.url y lo guarda en "fbImage"
+    //crea el formdata para almacenar el file con la imagen que trae this.video.image y lo guarda en "fbImage"
     const fbImagen = new FormData();
     fbImagen.append('file', this.videoImg);
     //una vez almacenado lo envia al destino con "subirFichero"

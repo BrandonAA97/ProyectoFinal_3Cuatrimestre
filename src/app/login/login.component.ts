@@ -18,9 +18,10 @@ export class loginComponent implements OnInit {
   email = "";
   username = "";
   password = "";
-  roles: string[] = [];
+   roles: string[] = [];
   errMsj = "no funca";
   usuariologueado= "";
+  rol="";
 
   constructor(
     private tokenService: TokenService,
@@ -34,7 +35,8 @@ export class loginComponent implements OnInit {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLoginFail = false;
-      this.roles = this.tokenService.getAuthorities();
+      // this.roles = this.tokenService.getAuthorities();
+
     }
   }
 
@@ -59,6 +61,13 @@ export class loginComponent implements OnInit {
         console.log(this.errMsj = "no funca");
       }
     });
+  
+    
+  }
+  logOut(){
+    this.isLogged = false;
+    this.router.navigate(['/']);
+    console.log("usuario borrado")
   }
 
 }
