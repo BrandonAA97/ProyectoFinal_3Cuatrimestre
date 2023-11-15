@@ -87,7 +87,7 @@ constructor(
          console.log("video.url: " + this.videoUrl)
         });
 
-    //crea el formdata para almacenar el file con el video que trae this.video.url y lo guarda en "fbImage"
+    //crea el formdata para almacenar el file con la imagen que trae this.video.image y lo guarda en "fbImage"
     const fbImagen = new FormData();
     fbImagen.append('file', this.videoImg);
     //una vez almacenado lo envia al destino con "subirFichero"
