@@ -1,74 +1,32 @@
-.contenedor{
-    background-color: rgba(22, 20, 20, 0.8);
-    max-width: 50%;
-    margin:0 auto;
-   
+.input-group{
+  font-size: 1.25rem;
+  position: relative;
+  --primary: #2196f3;
 }
-h1 {
-    text-align: center;
-    color: #000000;
-  }
-  .contact-form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .form-group {
-    margin-bottom: 10px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #000000;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  textarea {
-    height: 150px;
-  }
-
-  button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #000000;
-  }
-
-  .background-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-
-  }
-
-  .background-image {
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size:cover ;
-    animation: changeBackground 15s infinite;
-    background-image: no-repeat;
-  }
-
-  @keyframes changeBackground {
-    0% { background-image: url(/assets/img/fondo-futbol.jpg); }
-    25% { background-image: url(/assets/img/fondo-basquet.jpg);}
-    75% { background-image: url(/assets/img/fondo-voley.jpg);}
-    100% { background-image: url(/assets/img/fondo-futbol.jpg); }
-
-  }
+.input{
+  all:unset;
+  color: #fefefe;
+  padding: 1rem;
+  border: 1px solid #9e9e9e;
+  border-radius: 10px;
+  transition: 150ms
+  cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  pointer-events: none;
+  transition:150ms
+  cubic-bezier(0.4, 0, 0.2, 1);
+}
+.imput:focus{
+  border: 1px solid
+    var(--primary)
+}
+.imput:is(:focus, :valid) ~ label{
+  translate:(120%)
+  scale(0.7);
+  background-color: #1a1a1a;
+  color: var(--primary)
+}

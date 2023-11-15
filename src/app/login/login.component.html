@@ -1,6 +1,15 @@
 
 <div class="text-center" *ngIf="isLogged; else loggedOut">
-<button (ngSubmit)="onLogin()" > Cerrar Cuenta</button>
+  <div>
+    Bienvenido, {{ usuariologueado }}
+    <h1>welcome{{this.username}}</h1>
+    
+  </div>
+  <button (click)="logOut()">cerrar session</button>
+  <div *ngIf="usuariologueado">
+    
+    
+  </div>
 
 
 </div>
@@ -8,6 +17,7 @@
 
 <ng-template #loggedOut>
   <div  class="container d-flex justify-content-center">
+    
       <div class="card">
           <div class="card-header">
               <ul class="nav nav-tabs">
@@ -21,9 +31,11 @@
                 </ul>
           </div>
           <div class="card-body">
+            
               <form  #f="ngForm"  (ngSubmit)="onLogin()" novalidate>
+                <div class="input-group">
                   <div class="form-group">
-                      <label for="username">Nombre de Usuario</label>
+                      <label class="laber"for="username">Nombre de Usuario</label>
                       <input type="text" name="username" id="username" class="form-control"
                       [(ngModel)]="username" required/>
                     </div>
@@ -36,6 +48,7 @@
                   <div class="form-group">
                       <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                           <i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+                  </div>
                   </div>
               </form>
           </div>

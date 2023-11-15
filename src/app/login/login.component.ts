@@ -20,8 +20,7 @@ export class loginComponent implements OnInit {
   password = "";
    roles: string[] = [];
   errMsj = "no funca";
-  usuariologueado= "";
-  rol="";
+  usuariologueado= this.tokenService.getUserName();
 
   constructor(
     private tokenService: TokenService,
@@ -65,8 +64,9 @@ export class loginComponent implements OnInit {
     
   }
   logOut(){
+    this.router.navigate(['/login']);
     this.isLogged = false;
-    this.router.navigate(['/']);
+    sessionStorage.clear();
     console.log("usuario borrado")
   }
 
