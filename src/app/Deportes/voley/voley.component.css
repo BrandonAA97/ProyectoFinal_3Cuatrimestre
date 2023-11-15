@@ -106,6 +106,8 @@ img{
     background-position: center;
     background-size:cover ;
     background-image: url(/assets/img/fondo---voley.png);
+
+
     background-image: no-repeat;
 }
 @media screen and (max-width: 1400px){
