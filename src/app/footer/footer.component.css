@@ -1,15 +1,18 @@
 .pie-pagina {
     background-color: #f5f5f5;  /*Establece el color de fondo del pie de pagina */
-    padding: 20px;                /*Añade un espacio de 20 píxeles alrededor del contenido del pie de página*/
-    text-align: center;           /*Centra el contenido del pie de página horizontalmente*/
-}
+    padding: 20px 20px 0px 20px;                /*Añade un espacio de 20 píxeles alrededor del contenido del pie de página*/
+    text-align: center;
+              /*Centra el contenido del pie de página horizontalmente*/
+    border: 0px;
+  }
   
   .grupo-1 {
     display: flex; /*establece el contenedor como un flex container, 
     lo que permite utilizar las propiedades flexbox para la distribución de los elementos internos*/
     justify-content: space-between;  /*Distribuye los elementos internos de forma equidistante, dejando espacios entre ellos*/
     align-items: center;          /*Alinea verticalmente los elementos internos al centro del contenedor.*/
-    margin-bottom: 20px;           
+    margin-bottom: 20px;  
+       margin: 0px;       
   }
   
   
@@ -26,7 +29,8 @@
   }
   
   .grupo-2 {
-    margin-top: 20px;   
+    margin-top: 0px;
+    margin-bottom: 20px;   
     color: #999999;   
     text-align: center;
   }

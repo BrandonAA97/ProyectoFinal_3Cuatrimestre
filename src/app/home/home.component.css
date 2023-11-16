@@ -46,7 +46,7 @@
   @keyframes changeBackground {
     0% { background-image: url(/assets/img/fondo-futbol.jpg); }
     25% { background-image: url(/assets/img/fondo-basquet.jpg);}
-    75% { background-image: url(/assets/img/fondo-voley.jpg);}
+    75% { background-image: url(/assets/img/fondo--voley.jpg);}
     100% { background-image: url(/assets/img/fondo-futbol.jpg); }
     
   }
