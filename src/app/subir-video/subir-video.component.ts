@@ -26,16 +26,14 @@ constructor(
   private router: Router
   ){}
   ngOnInit() {
-    if(this.tokenService.getAuthorities()){
     
-    }
     if(this.tokenService.getToken()){
       this.isLogger=true;
       this.username = this.tokenService.getUserName();
     } else{
       this.isLogger = false;
       this.username = "";
-      this.router.navigate(['/']); 
+      this.router.navigate(['/login']); 
     }
   }
 
@@ -59,7 +57,6 @@ constructor(
     }
    }
    procesarVideo(file: File | undefined) {
-     //const fb = new FormData();
     if(file !== undefined){
 
        const fileName = file.name;
@@ -69,15 +66,10 @@ constructor(
        this.video.url = fileNameString;
        console.log(this.video.url)
     }
-
-      //  this.mediaService.subirFichero(fb)
-      //       .subscribe(response=>{
-      //         console.log('video subido', response);
-      //       });
     }
 
     procesarImage(file: File | undefined) {
-      //const fb = new FormData();
+
       if(file !== undefined){
         const fileName = file.name;
 
@@ -86,10 +78,7 @@ constructor(
         this.video.image = fileNameString;
         console.log(this.video.image)
       }
-       //  this.mediaService.subirFichero(fb)
-       //       .subscribe(response=>{
-       //         console.log('video subido', response);
-       //       });
+
      }
 
 
